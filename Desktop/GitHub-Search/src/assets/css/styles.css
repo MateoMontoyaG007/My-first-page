@@ -1,0 +1,95 @@
+:root {
+    --bgColor: #0e141f;
+    --whiteColor: #fff;
+    --blueColor: #0092ca;
+    --bgInput: #27293d;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('https://desktop.github.com/images/star-bg.svg');
+    background-repeat: no-repeat;
+    background-color: var(--bgColor);
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--whiteColor);
+    font-size: 1.6rem;
+}
+
+@media (max-width:768px) {
+    body {
+        background-position: right;
+    }
+}
+
+/* Fuentes 
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container-user h1 {
+    font-size: 5rem;
+    margin: 2rem 0;
+}
+
+.container-user .fa-github-alt {
+    width: 15%;
+    color: var(--blueColor);
+}
+
+.container-user .search-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-user input, button {
+    padding: 1rem;
+    display: inline-block;
+    border: 0.1rem solid #e1e1e1;
+    border-radius: unset;
+    color: var(--whiteColor);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.7rem;
+}
+
+.search-user input {
+    flex-basis: 80%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: var(--bgInput);
+}
+
+.search-user button {
+    flex-basis: 20%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    background-color: var(--bgColor);
+}
+
+.search-user input:focus {
+    outline-color: var(--blueColor);
+}
